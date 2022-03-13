@@ -1,0 +1,15 @@
+.product{
+    display: block;
+    justify-content: center;
+    max-width: 80%;
+    max-height: auto;
+    background-color: rgb(120, 124, 129);
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+}
+
+img.image-source{
+    max-width: 100%;
+}

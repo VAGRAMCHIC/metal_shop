@@ -1,0 +1,27 @@
+.product{
+    display: inline-block;
+    max-width: 300px;
+    max-height: auto;
+    background-color: rgb(120, 124, 129);
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.product-list{
+    max-width: 100%;
+}
+
+img.image-source{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.description{
+    justify-content: space-between;
+    color: black;
+}
+
+span{
+    display: block;
+}

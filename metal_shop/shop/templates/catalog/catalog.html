@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block HEAD %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../static/css/base.css">
+    <link rel="stylesheet" href="../../static/css/catalog.css">
+{% endblock HEAD %}
+
+{% block nav-items %}
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+            <a class="nav-link " aria-current="page" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Catalog</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+        </li>
+    </ul>
+{% endblock nav-items %}
+
+{% block content %}
+    <div class="product-list">
+        {% for prd in products %}
+        <a class="product-link" href="catalog/{{prd.id}}">
+            <div class="product rounded">
+                <div class="image">
+                    <img class="image-source rounded" src={{prd.photo_set.all.image.url}}>
+                </div>
+                <div class="description">
+                    <h1 class="product-name">{{prd.name}}</h1>
+                    <span class="specification">{{prd.description}}</span>
+                    <span class="price">{{prd.price}}</span>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+    </div>
+    
+    
+
+{% endblock content %}
+
