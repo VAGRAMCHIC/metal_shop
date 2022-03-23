@@ -15,7 +15,7 @@
             <a class="nav-link " aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="/catalog">Catalog</a>
+            <a class="nav-link active" href="/catalog">Catalog/ {{product.name}}</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" href="#">About us</a>
@@ -24,39 +24,59 @@
 {% endblock nav-items %}
 
 {% block content %}
+<div class="container">
     <div class="product">
+        <div class="bio">
+            <h1 class="name">{{product.name}}</h1>
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
+                <div class="carousel-indicators">
                     {% for photo in product.photo_set.all %}
-                    {% with photo.counter0 as i %}
-                        <li data-target="#carouselExampleIndicators" data-slide-to="{{photo.counter0}}"{% if i is 0 %}class="active"{% endif %}></li>
+                    {% with forloop.counter0 as i %}
+                        <button type="button" data-target="#carouselExampleIndicators" data-slide-to="{{i}}"{% if i is 0 %}class="active" aria-current="true"{% endif %}></button>
                     {% endwith %}
                     {% endfor %}
-                </ol>
+                </div>
                 <div class="carousel-inner">
                     {% for photo in product.photo_set.all %}
-                    {% with photo.counter0 as i %}
+                    {% with forloop.counter0 as i %}
                             <div class="carousel-item {% if i is 0 %}active{% endif %}">
-                            <img class="d-block w-100 image-source rounded" src={{photo.image.url}} style='height: 30rem;'>
+                                <img class="d-block w-100 image-source rounded" src={{photo.image.url}}>
                             </div>
                     {% endwith %}
                     {% endfor %}
                 </div>
-                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Next</span>
+                </button>
             </div> 
-        <div class="description">
-            <h1 class="name">{{product.name}}</h1>
-            <div class="description">{{product.description}}</div>
+            <div class="description">
+                <h2>Описание</h2>
+                {{product.description}}
+            </div>
+            <div class="chracteristic">
+                <p class="d_type">Тип металоискателя: {{product.d_type}}</p>
+                <p class="frequency">Рабочая частота: {{product.frequency}}</p>
+                <p class="discriminator">Дискриминатор: {% if product.discriminator is True %}есть {% else %}нет{% endif %}</p>
+                <p class="ground_balance">балансировка грунта: {{product.ground_balance}}</p>
+                <p class="sencetivity_settings">Настройка чувствительности: {% if product.sencetivity_settings is True %}есть {% else %}нет{% endif %}</p>
+                <p class="headphone">Подключение наушниеов:  {% if product.headphone is True %}есть {% else %}нет{% endif %}</p>
+                <p class="headphone_type">Тип наушников: {{product.headphone_type}}</p>
+                <p class="coil_diameter">Диаметр катушки:{{product.coil_diameter}}</p>
+                <p class="waterproof_coil">Водозащита катушки: {% if product.waterproof_coil is True %}есть {% else %}нет{% endif %}</p>
+                <p class="length">Длинна металоискателя: {{product.length}}</p>
+                <p class="material">Материал:{{product.material}}</p>
+                <p class="work_pattern">Принцип работы: {{product.work_pattern}}</p>
+                <p class="producing_country">Страна производитель: {{product.producing_country}}</p>                    
+            </div>
             <div class="price">{{product.price}}</div>
 
         </div>
     </div>
+</div>
 {% endblock content %}
 

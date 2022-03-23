@@ -3,6 +3,31 @@
     margin-right: 10%;
 }
 
+.navbar{
+    position: absolute;
+    top: 0px;
+    width: 100%;
+}
+
+.bottom{
+    height: 350px;
+    background-color: #2b2e31;
+
+}
+
+.contact-group{
+    padding-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.55);
+}
+
 body{
-    background-color: #373b3f;
+    background-color: #292929;
+}
+
+text{
+    color: #FFFFFF;
 }

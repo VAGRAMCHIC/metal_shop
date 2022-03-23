@@ -1,15 +1,53 @@
+.container{
+    background-color: #616161;
+    max-width: 80%;
+    height: 100%;
+
+}
+
 .product{
     display: block;
     justify-content: center;
-    max-width: 80%;
     max-height: auto;
-    background-color: rgb(120, 124, 129);
-    margin-top: 20px;
+    background-color: #616161;
+    color: rgba(255, 255, 255, 0.90);
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
+    padding-top: 40px;
 }
 
-img.image-source{
-    max-width: 100%;
+.image-source{
+    object-fit: cover;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    height: 600px;
 }
+
+.name{
+    padding-top: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.description{
+    padding-top: 40px;
+    padding-left: 20px;
+    justify-content: center;
+    text-align: center;
+}
+
+.chracteristic{
+    padding-top: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.price{
+    text-align: end;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 0%;
+}
+

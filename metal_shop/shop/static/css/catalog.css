@@ -1,15 +1,21 @@
+.product-list{
+    margin: auto;
+    padding-top: 60px;
+    text-align: center;
+    max-width: 80%;
+    background-color: #616161;
+    padding-bottom: 60px;
+}
+
 .product{
     display: inline-block;
     max-width: 300px;
-    max-height: auto;
-    background-color: rgb(120, 124, 129);
+    max-height: 300px;
+    overflow: hidden;
     margin-top: 20px;
     margin-left: 20px;
     padding: 10px;
-}
-
-.product-list{
-    max-width: 100%;
+    background-color: rgb(120, 124, 129);
 }
 
 img.image-source{
@@ -20,6 +26,10 @@ img.image-source{
 .description{
     justify-content: space-between;
     color: black;
+}
+
+a{
+    text-decoration: none;
 }
 
 span{

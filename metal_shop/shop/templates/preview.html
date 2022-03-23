@@ -24,14 +24,22 @@
 {% endblock nav-items %}
 
 {% block content %}
-    <div class="offers rounded">
-        <div class="image">
-            <img class="image-source rounded" src={{offer.image.url}} alt="{{offer.name}}">
+    <div class="container">
+        <div class="offers rounded">
+            <div class="image">
+                {% for p in photo %}
+                <img class="image-source rounded" src={{p.image.url}}>
+                {% endfor %}
+            </div>
+            <div class="description">
+                <h1 class="product-name">{{offer.name}}</h1>
+                <span class="specification">{{offer.description}}</span>
+                <span class="price">{{offer.price}}</span>
+            </div>
         </div>
-        <div class="description">
-            <h1 class="product-name">{{offer.name}}</h1>
-            <span class="specification">{{offer.description}}</span>
-            <span class="price">{{offer.price}}</span>
+        <div class="preview">
+            <h2 class="presentation"></h2>
+            <p class="presentation-text"></p>
         </div>
     </div>
 
