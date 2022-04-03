@@ -1,5 +1,4 @@
 .container{
-    background-color: #616161;
     max-width: 80%;
     height: 100%;
 
@@ -9,13 +8,27 @@
     display: block;
     justify-content: center;
     max-height: auto;
-    background-color: #616161;
-    color: rgba(255, 255, 255, 0.90);
     margin-left: auto;
     margin-right: auto;
+    margin-top: 30px;
     padding: 10px;
-    padding-top: 40px;
+    
 }
+
+#carouselBio{
+    margin-top: 20px;
+}
+
+.carousel-tabs{
+    display: flex;
+    justify-content: space-between;
+    font-size: 32pt;
+}
+
+.carousel-btn-group{
+    width: 100%;
+}
+
 
 .image-source{
     object-fit: cover;
@@ -25,29 +38,41 @@
     height: 600px;
 }
 
-.name{
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-
 .description{
     padding-top: 40px;
-    padding-left: 20px;
+    padding-left: 10%;
+    padding-right: 10%;
     justify-content: center;
     text-align: center;
 }
 
 .chracteristic{
-    padding-top: 20px;
+    padding-top: 40px;
     padding-left: 10%;
     padding-right: 10%;
 }
 
+
+.feedback{
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.fedb-item{
+    background-color: rgba(138, 138, 138, 0.267);
+    padding-top: 10px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 10px;
+}
+
+.add-feedback{
+    margin-top: 25px;
+}
+
 .price{
     text-align: end;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    margin: 0%;
 }
 

@@ -10,38 +10,29 @@
 {% endblock HEAD %}
 
 {% block nav-items %}
-    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="preview">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="catalog">Catalog</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About us</a>
-        </li>
-    </ul>
+    <a class="nav-link" href="catalog">КАТАЛОГ</a>
 {% endblock nav-items %}
 
 {% block content %}
-    <div class="container">
+    <main class="container">
         <div class="offers rounded">
-            <div class="image">
-                {% for p in photo %}
-                <img class="image-source rounded" src={{p.image.url}}>
-                {% endfor %}
-            </div>
-            <div class="description">
-                <h1 class="product-name">{{offer.name}}</h1>
-                <span class="specification">{{offer.description}}</span>
-                <span class="price">{{offer.price}}</span>
-            </div>
+            <a class="link-dark" href="catalog/{{offer.id}}" style="text-decoration: none">
+                <h1 class="product-name" style="padding-left: 15px">{{offer.name}}</h1>
+                <div class="image">
+                    {% for p in photo %}
+                        <img class="image-source rounded" src={{p.image.url}}>
+                    {% endfor %}
+                </div>
+                <div class="description">
+                    <p class="specification">{{offer.description}}</p>
+                    <p class="price">{{offer.price}}&#x20bd</p>
+                </div>
+            </a>
         </div>
         <div class="preview">
-            <h2 class="presentation"></h2>
-            <p class="presentation-text"></p>
+            <p class="presentation"></p>
         </div>
-    </div>
+    </main>
 
 {% endblock content %}
 

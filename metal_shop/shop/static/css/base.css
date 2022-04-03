@@ -3,29 +3,24 @@
     margin-right: 10%;
 }
 
-.navbar{
-    position: absolute;
-    top: 0px;
-    width: 100%;
-}
 
 .bottom{
     height: 350px;
-    background-color: #2b2e31;
+    background-color: #343434;
+    color: rgba(255, 255, 255, 0.55);
 
 }
 
 .contact-group{
     padding-top: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 25%;
+    margin-right: 25%;
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 255, 255, 0.55);
 }
 
 body{
-    background-color: #292929;
+    background-color: #FFF;
 }
 
 text{
