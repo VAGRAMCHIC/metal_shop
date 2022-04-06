@@ -1,18 +1,19 @@
 .container{
-    max-width: 80%;
+    max-width: 1128px;
     height: 100%;
+    margin: 0px auto;
+}
 
+.topic > span{
+    font-size: 30pt;
+    margin: 0px;
 }
 
 .product{
     display: block;
     justify-content: center;
-    max-height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+    margin: 30px auto;
     padding: 10px;
-    
 }
 
 #carouselBio{
@@ -76,3 +77,52 @@
     text-align: end;
 }
 
+
+@media screen and (max-width: 768px) {
+    .description{
+        padding: 20px 10px;
+        width: 100%;
+        font-size: 16pt;
+    }
+
+    .chracteristic{
+        padding: 20px 10px;
+    }
+    
+    .feedback{
+        padding: 20px 10px;
+    }
+
+    p{
+        text-align: left;
+        font-size: 14pt;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .description{
+        padding: 20px 10px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .description{
+        padding: 20px 20px;
+        width: 100%;
+        font-size: 16pt;
+    }
+
+    .chracteristic{
+        padding: 20px 20px;
+    }
+    
+    .feedback{
+        padding: 20px 20px;
+    }
+
+    p{
+        text-align: left;
+        font-size: 14pt;
+    }
+}

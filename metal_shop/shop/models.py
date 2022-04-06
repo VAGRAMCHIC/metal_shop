@@ -39,6 +39,7 @@ class Feedback(models.Model):
     product_inst = models.ForeignKey(Product, on_delete=models.CASCADE)
     author = models.CharField(max_length=25, blank=True, default=None)
     text = models.TextField(max_length=400, blank=True)
+    pub_date = models.DateField(auto_now=True)
 
     def __str__(self):
         return self.product_inst.name+': '+self.text

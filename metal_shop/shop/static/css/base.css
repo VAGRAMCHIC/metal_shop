@@ -18,6 +18,9 @@
     display: flex;
     justify-content: space-between;
 }
+.contact-group > p{
+    font-size: 16pt;
+}
 
 body{
     background-color: #FFF;
@@ -25,4 +28,70 @@ body{
 
 text{
     color: #FFFFFF;
+}
+
+@media screen and (max-width:768px){
+    .container-fluid{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    button.navbar-toggler{
+        height: 100%;
+    }
+
+    a.navbar-brand{
+        font-size: 30px;
+    }
+    a.nav-link{
+        font-size: 30px;
+    }
+
+    .contact-group{
+        padding-top: 25px;
+        margin-left: 15%;
+        margin-right: 15%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width:500px){
+    .container-fluid{
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+
+    button.navbar-toggler{
+        height: 100%;
+    }
+
+    a.navbar-brand{
+        font-size: 30px;
+    }
+    a.nav-link{
+        font-size: 30px;
+    }
+
+    .contact-group{
+        padding-top: 25px;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@font-face {
+    font-family: "Etna";
+    src: url('../fonts/etna-free-font.otf');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "NocturnoBG";
+    src: url('..//fonts/NocturnoBG.otf');
+    font-style: normal;
+    font-weight: normal;
 }

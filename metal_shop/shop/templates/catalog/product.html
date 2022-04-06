@@ -1,12 +1,8 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
+
 {% block HEAD %}
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>МЕТАЛШОП {{product.name}}</title>
-    <link rel="stylesheet" href="../../static/bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="../../static/css/base.css">
     <link rel="stylesheet" href="../../static/css/product.css">
 {% endblock HEAD %}
 
@@ -18,10 +14,9 @@
 <main class="container">
     <div class="product">
         <div class="bio">
-          <hr class="topic" style="clear:both;">
-            <h1 class="name" style="text-align:end;float:left;">{{product.name}}</h1>
-            <h5 class="price" style="text-align:end;float:right;">Цена: {{product.price}}</h5>
-          </hr>
+          <section class="topic">
+            <span>{{product.name}}</span>
+          </section>
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
                   {% for photo in product.photo_set.all %}
@@ -53,6 +48,7 @@
                   <div class="carousel-item active">
                       <div class="description">
                         <p>{{product.description}}</p>
+                        <span class="price" style="text-align:end;float:right;">Цена: {{product.price}}</span>
                       </div>
                   </div>
                 <div class="carousel-item">
@@ -77,7 +73,8 @@
                       {% for feedb in feedbacks %}
                         <div class="fedb-item rounded">
                           <p>{{feedb.text}}</p>
-                          <p style="text-align: end">{{feedb.author}}</p>  
+                          <p style="text-align: end">{{feedb.author}}</p>
+                          <p style="text-align: end">{{feedb.pub_date}}</p>
                         </div>
                       {% endfor %}  
                       <form class="add-feedback" action="{{product.id}}" method="post">    

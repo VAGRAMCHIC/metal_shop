@@ -17,7 +17,6 @@
     max-height: 300px;
     overflow: hidden;
     margin-top: 20px;
-    margin-left: 20px;
     padding: 10px;
 }
 
@@ -37,4 +36,39 @@ a{
 
 span{
     display: block;
+}
+
+@media screen and (max-width:768px){
+    .product-list{
+        margin: auto;
+        padding-top: 20px;
+        display: block;
+        text-align: center;
+        padding-bottom: 10px;
+        max-width: 100%;
+    }
+
+    .product-link{
+        width: 100%;
+        padding: 0px;
+    }
+
+    .price{
+        margin-bottom: 10px;
+    }
+
+    .product{
+        background-color: #343434;
+        max-width: 100%;
+        max-height: 800px;
+        margin-top: 0px;
+    }
+
+    .product-name{
+        padding-top: 10px;
+    }
+
+    span{
+        font-size: 16pt;
+    }
 }
