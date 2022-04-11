@@ -37,3 +37,39 @@
     padding-top: 15px;
     padding-left: 15px;
 }
+
+
+@media screen and (max-width:768px){
+    .container{
+        max-width: 100%;
+        height: 100%;
+        padding-bottom: 40px;
+    }
+
+    .offers{
+        width: 100%;
+        min-width: 310px;
+        margin-top: 20px;
+        margin-right: 0px;
+        margin-left: 0px;
+        font-size: 16pt;
+        text-decoration: none;
+    }
+}
+
+@media screen and (max-width:500px){
+    .container{
+        max-width: 100%;
+        height: 100%;
+        padding-bottom: 40px;
+    }
+
+    .offers{
+        width: 100%;
+        min-width: 310px;
+        margin-top: 20px;
+        margin-right: 10px;
+        margin-left: 10px;
+        text-decoration: none;
+    }
+}

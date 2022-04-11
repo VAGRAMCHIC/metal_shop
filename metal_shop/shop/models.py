@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 # Create your models here.
 class Product(models.Model):
     name = models.CharField(max_length=70, blank=False)
-    description = models.CharField(max_length=400, blank=False)
+    description = models.TextField(max_length=400, blank=False)
     d_type = models.CharField(max_length=30, blank=False, default="")
     frequency = models.CharField(max_length=10, blank=False, default="")
     discriminator = models.BooleanField(blank=False, default=False)
@@ -43,3 +43,26 @@ class Feedback(models.Model):
 
     def __str__(self):
         return self.product_inst.name+': '+self.text
+
+class Distributor(models.Model):
+    name = models.CharField(max_length=20,blank=False)
+    last_name = models.CharField(max_length=20, blank=False)
+    phone = models.CharField(max_length=17, blank=False)
+
+    def __str__(self):
+        return self.name +' '+ self.last_name
+    
+class City(models.Model):
+    name = models.CharField(max_length=20, blank=False)
+    distributors = models.ManyToManyField(Distributor, blank=True)
+    
+    def __str__(self):
+        return self.name
+
+class Social(models.Model):
+    name = models.CharField(max_length=20, blank=False)
+    link = models.CharField(max_length=100, blank=False)
+
+    def __str__(self):
+        return self.name
+    

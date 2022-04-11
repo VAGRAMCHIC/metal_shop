@@ -5,7 +5,9 @@
 
 
 .bottom{
-    height: 350px;
+    min-height: 350px;
+    bottom: 0;
+    width: 100vw;
     background-color: #343434;
     color: rgba(255, 255, 255, 0.55);
 
@@ -13,27 +15,78 @@
 
 .contact-group{
     padding-top: 20px;
-    margin-left: 25%;
-    margin-right: 25%;
+    margin-left: 20%;
+    margin-right: 20%;
     display: flex;
     justify-content: space-between;
 }
-.contact-group > p{
+
+.bg-custom{
+    color: rgba(255, 255, 255, 0.55);
+    background-color: #343434;
+}
+.accordion{
+    margin-bottom: 20px;
+    min-width: 300px;
+}
+
+.accordion-button{
+    font-size: 12pt;
+}
+
+.accordion-body{
+    background-color: #3d3d3d;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-body > span{
+    margin-left:15px;
+}
+
+.contact{
+    list-style: none;
+    padding-left: 5px;
+}
+
+.location{
+    display: block;
+    padding-bottom: 15px;
+}
+
+.location-btn{
+    min-width: 150px;
+    text-align: end;
+}
+
+
+.phones > p{
     font-size: 16pt;
+    text-align: center;
 }
 
-body{
-    background-color: #FFF;
+.social > p{
+    font-size: 16pt;
+    text-align: center;
 }
 
-text{
-    color: #FFFFFF;
+.social > a{
+    font-size: 12pt;
+    text-align: center;
 }
+
 
 @media screen and (max-width:768px){
     .container-fluid{
         margin-left: 0%;
         margin-right: 0%;
+    }
+
+    .accordion-button{
+        font-size: 16pt;
+    }
+    #CityAccordion{
+        text-align: center;
     }
 
     button.navbar-toggler{
@@ -48,10 +101,11 @@ text{
     }
 
     .contact-group{
+        text-align: center;
         padding-top: 25px;
         margin-left: 15%;
         margin-right: 15%;
-        display: flex;
+        display: block;
         justify-content: space-between;
     }
 }
@@ -74,10 +128,11 @@ text{
     }
 
     .contact-group{
+        text-align: center;
         padding-top: 25px;
         margin-left: 5%;
         margin-right: 5%;
-        display: flex;
+        display: block;
         justify-content: space-between;
     }
 }

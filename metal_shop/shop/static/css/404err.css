@@ -1,0 +1,24 @@
+main{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+
+.head-container{
+    width: 100%;
+    margin: 0px;
+    background-color: #343434;
+    padding-top: 50vh;
+    position: relative;
+    margin: auto;
+}
+
+.home{
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.err-text > article{
+    font-size: 16pt;
+    padding-top: 20px;
+}

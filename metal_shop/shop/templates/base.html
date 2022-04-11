@@ -34,12 +34,48 @@
 
     <div class="bottom">
         <div class="contact-group">
-            <p>Свяжитесь с нами</p>
-            <p>Мы в соцсетях</p>
+            <div class="phones">
+                <p>Свяжитесь с нами</p>
+                <div class="accordion accordion-flush" id="CityAccordion">
+                    {% for city in cities %}
+                    {% with forloop.counter as accordionID %}
+                        <div class="accordion-item bg-custom">
+                            <h2 class="accordion-header" id="flush-heading{{accordionID}}">
+                              <button class="accordion-button collapsed btn-outline-light bg-custom" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapse{{accordionID}}" aria-expanded="false" aria-controls="flush-collapse{{accordionID}}">
+                                {{city.name}}
+                              </button>
+                            </h2>
+                            {% for distributor in city.distributors.all %}
+                                <div id="flush-collapse{{accordionID}}" class="accordion-collapse collapse" aria-labelledby="flush-heading{{accordionID}}" data-bs-parent="#CityAccordion">
+                                    <div class="accordion-body">
+                                        <span>
+                                            {{distributor.name}} {{distributor.last_name}}
+                                        </span>
+                                        <span>
+                                            {{distributor.phone}}
+                                        </span>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endwith %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="social">
+                <p>Мы в соцсетях</p>
+                <div class="list-group">
+                    {% for soc in social %}
+                    <a type="button" class="list-group-item list-group-item-action bg-custom" href="{{soc.link}}">{{soc.name}}</a>
+                    {% endfor %}
+                </div>
+            </div>
         </div>
     </div>
 </body>
 
 
 <script src='../static/bootstrap/js/bootstrap.min.js'></script>
+<script src='../static/bootstrap/js/bootstrap.bundle.min.js'></script>
+
 </html>
